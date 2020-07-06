@@ -1,4 +1,5 @@
-const {expect, describe,it } = require('@jest/globals') ;
+const {expect, describe,it, toEqual } = require('@jest/globals') ;
+const {multiply} = require('controllers/users');
 
 describe('test case multiplying two numbers',()=>{
     it('should get 0 when multiply any number',()=>{

@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const { multiply } = require('../controllers/users');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', (req, res, next) =>{
+  const a = parseInt(req.query.a);
+  const b = parseInt(req.query.b);
+  const result = multiply(a,b)
+  res.send(`the multiplication ${a}*${b} = ${result}`);
 });
 
 module.exports = router;
