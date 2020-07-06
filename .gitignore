@@ -1,0 +1,14 @@
+.vscode
+.vscode/*
+.vscode/**/*
+.vs
+.idea
+node_modules
+node_modules/*
+node_modules/**/*
+coverage
+coverage/*
+coverage/**/*
+.DS_Store
+filesUploaded
+*.log
