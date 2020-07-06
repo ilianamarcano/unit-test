@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +14,30 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "jest": {
+    "verbose": false,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/bin/"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "./src"
+    ]
+  }
 }
